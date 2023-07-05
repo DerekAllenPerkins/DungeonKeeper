@@ -3,8 +3,8 @@ package main;
 public class Combatant {
 	
 	private String name;
-	private byte initiative;
-	private byte order;
+	private Integer initiative;
+	private Integer order;
 	
 	public Combatant() {
 		
@@ -14,7 +14,7 @@ public class Combatant {
 		
 	}
 	
-	public Combatant(String n, byte i) {
+	public Combatant(String n, int i) {
 		
 		name = n;
 		initiative = i;
@@ -28,11 +28,11 @@ public class Combatant {
 		name = n;
 	}
 	
-	public void setInit(byte i) {
+	public void setInit(int i) {
 		initiative = i;
 	}
 	
-	public void setOrder(byte o) {
+	public void setOrder(int o) {
 		order = o;
 	}
 	
@@ -42,12 +42,18 @@ public class Combatant {
 		return name;
 	}
 	
-	public byte getInit() {
+	public Integer getInit() {
 		return initiative;
 	}
 	
-	public byte getOrder() {
+	public Integer getOrder() {
 		return order;
+	}
+	
+	// --- Misc --- //
+	
+	public String toString() {
+		return name + ": " + initiative;
 	}
 
 }
